@@ -6,13 +6,12 @@ function login() {
   const username = usernameInput.value.trim();
   const password = passwordInput.value.trim();
 
-  // BUG: validasi hanya mengecek username, password kosong tetap dianggap berhasil.
-  if (username) {
-    message.textContent = 'Login berhasil.';
-    message.style.color = 'green';
+  if (!username || !password) {
+    message.textContent = 'Username dan password wajib diisi.';
+    message.style.color = 'red';
     return;
   }
 
-  message.textContent = 'Username wajib diisi.';
-  message.style.color = 'red';
+  message.textContent = 'Login berhasil.';
+  message.style.color = 'green';
 }
