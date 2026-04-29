@@ -8,7 +8,7 @@ function login() {
 
   // BUG: validasi hanya mengecek username, password kosong tetap dianggap berhasil.
   if (username) {
-    message.textContent = 'Login berhasil.';
+    message.textContent = 'Login berhasil tanpa validasi password.';
     message.style.color = 'green';
     return;
   }
